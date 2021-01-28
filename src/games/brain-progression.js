@@ -3,7 +3,7 @@ import runGame from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
-const missingNumberInArray = getRandomInt(0, 4);
+const missingNumberInArray = getRandomInt(0, 9);
 
 const getQuestionAndCorrectAnswer = () => {
   let progressionMember = getRandomInt(1, 100);
@@ -19,7 +19,7 @@ const getQuestionAndCorrectAnswer = () => {
   }
   const correctAnswer = arr[missingNumberInArray];
   arr[missingNumberInArray] = '..';
-  return [arr.join(', '), correctAnswer];
+  return [arr.join(' '), correctAnswer];
 };
 
 export default () => runGame(rules, getQuestionAndCorrectAnswer);
