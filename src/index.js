@@ -13,8 +13,8 @@ const runGame = (rules, getQuestionAndAnswer) => {
   let attempt = 1;
   for (attempt; attempt <= attempts; attempt += 1) {
     const [question, trueAnswer] = getQuestionAndAnswer();
-    const answer = readlineSync.question(`Quesion: ${question}\nYour answer: `);
-
+    console.log(`Quesion: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
     if (`${trueAnswer}` === answer) {
       console.log('Correct!');
     } else {
